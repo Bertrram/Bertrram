@@ -11,7 +11,6 @@ import { world } from './scenes/world.mjs';
 import { title } from './scenes/title.mjs';
 import { stats } from './scenes/stats.mjs';
 import { projects } from './scenes/projects.mjs';
-import { nowPlaying } from './scenes/nowplaying.mjs';
 import { buttons } from './scenes/buttons.mjs';
 
 const args = process.argv.slice(2);
@@ -35,7 +34,6 @@ const files = {
   'stats.svg': stats(s),
   ...projects(s, config),
   'world.svg': world(s),
-  'now-playing.svg': nowPlaying(s, config),
 };
 
 await mkdir(out, { recursive: true });

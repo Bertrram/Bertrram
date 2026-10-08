@@ -18,38 +18,6 @@ export const WHEEL_A = ['.KKKK.', 'KKRRKK', 'KRGGRK', 'KRGGRK', 'KKRRKK', '.KKKK
 export const WHEEL_B = ['.KKKK.', 'KRKKRK', 'KKGGKK', 'KKGGKK', 'KRKKRK', '.KKKK.'];
 export const WHEEL_P = { K: '#16161a', R: '#8a8f99', G: '#d7dbe2' };
 
-export const PLAYER = [
-  '......bbbb......',
-  '....bbBBBBbb....',
-  '...bBBBBBBBBb...',
-  '..bBBLLLLLLBBb..',
-  '.gbBddddddddBbg.',
-  '.GbBddddddddBbG.',
-  '.GbBdWEddWEdBbG.',
-  '.gbBddddddddBbg.',
-  '..bBdddMMdddBb..',
-  '..bBBddddddBBb..',
-  '...bBBBBBBBBb...',
-  '..bBBBBLLBBBBb..',
-  '.bBBBBBLLBBBBBb.',
-  '.bBBBBBBBBBBBBb.',
-  '.bBbCCCCCCCCbBb.',
-  '.bBbCcCCCCyCbBb.',
-  '.bBBbCCCCCCbBBb.',
-  '..bBBBBBBBBBBb..',
-  '..bbbbbbbbbbbb..',
-  '...PPPPPPPPPP...',
-  '...PPPPppPPPP...',
-  '...PPPP..PPPP...',
-  '..KKKKK..KKKKK..',
-  '..kkkkk..kkkkk..',
-];
-export const PLAYER_P = {
-  b: '#0b4fc0', B: '#126BFC', L: '#8fb8ff', d: '#16213f', W: '#ffffff', E: '#16213f',
-  M: '#3c5590', g: '#5d6270', G: '#2a2d36', C: '#2c303c', c: '#ff5a5a', y: '#ffd84a',
-  P: '#2b2f45', p: '#1d2033', K: '#14151c', k: '#d8dbe6',
-};
-
 export const ICON_OMOIO = [
   '..UUUUUUUUUUUU..',
   '.UUUUUUUUUUUUUU.',
@@ -139,43 +107,6 @@ export const ICONS = {
   floppy: [ICON_FLOPPY, ICON_FLOPPY_P],
 };
 
-export const TROPHY = [
-  '.YYYYYYYYYY.',
-  'YYWYYYYYYyYY',
-  'Y.YWYYYYyY.Y',
-  'Y.YWYYYYyY.Y',
-  '.YYYYYYYyYY.',
-  '...YYYYyY...',
-  '....YYyY....',
-  '.....Yy.....',
-  '.....Yy.....',
-  '....YYYy....',
-  '...yyyyyy...',
-  '...yyyyyy...',
-];
-export const TROPHY_GOLD = { Y: '#ffd84a', y: '#c99a1b', W: '#fff6c4' };
-export const TROPHY_LOCKED = { Y: '#3a4361', y: '#2a3049', W: '#4a5578' };
-
-export const LOCK = [
-  '..###..',
-  '.#...#.',
-  '.#...#.',
-  '#######',
-  '###.###',
-  '###.###',
-  '#######',
-];
-
-export const HEART = [
-  '.RR.RR.',
-  'RWRRRRR',
-  'RRRRRRR',
-  '.RRRRR.',
-  '..RRR..',
-  '...R...',
-];
-export const HEART_P = { R: '#ff4d6d', W: '#ffd1da' };
-
 export const CLOUD = [
   '....WWWW........',
   '..WWWWWWWW.WWW..',
@@ -252,14 +183,3 @@ export const CHAT = [
 ];
 export const CHAT_P = { B: '#5865f2', W: '#ffffff' };
 
-export const PAD = [
-  '..CCCCCCCC..',
-  '.CCCCCCCCCC.',
-  'CCDCCCCCCRCC',
-  'CDDDCCCCYCGC',
-  'CCDCCCCCCBCC',
-  'CCCCCCCCCCCC',
-  'CCC......CCC',
-  '.C........C.',
-];
-export const PAD_P = { C: '#d7dbe2', D: '#2c303c', R: '#ff5a5a', Y: '#ffd84a', G: '#4ade80', B: '#5aa9ff' };

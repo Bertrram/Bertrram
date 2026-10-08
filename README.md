@@ -29,5 +29,3 @@ write Rust and TypeScript, with some C# and .NET.
 </details>
 
 <img src="https://raw.githubusercontent.com/Bertrram/Bertrram/arcade-output/world.svg" width="100%" alt="My contribution calendar drawn as a block world: one column per week, one block underground per day, with rarer ore on busier days." />
-
-<img src="https://raw.githubusercontent.com/Bertrram/Bertrram/arcade-output/now-playing.svg" width="100%" alt="Currently playing: Minecraft, Terraria, SnowRunner, Skylanders and anything Nintendo" />

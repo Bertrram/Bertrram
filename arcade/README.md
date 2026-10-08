@@ -21,4 +21,3 @@ What the profile says about me is in `config.mjs`.
 | `stats.svg` | contributions, longest streak, busiest day and stars in the last year, and bytes of each language across my repos |
 | `projects/*.svg` | each repo's stars, forks, open issues, commits, last push and main language |
 | `world.svg` | the contribution calendar: hills are weeks, ore underground is days |
-| `now-playing.svg` | the games in `config.mjs` |

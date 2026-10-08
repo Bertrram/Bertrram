@@ -12,8 +12,6 @@ export default {
     { repo: 'omoio-portraits', icon: 'portal', blurb: "Reads the figure pictures out of your own copy of Skylanders SWAP Force for Omoio's portal menu." },
   ],
 
-  games: ['Minecraft', 'Terraria', 'SnowRunner', 'Skylanders', 'Anything Nintendo'],
-
   links: {
     omoio: 'https://omoio.app',
     linkedin: 'https://www.linkedin.com/in/bertrambech',
