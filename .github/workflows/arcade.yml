@@ -1,0 +1,41 @@
+name: Arcade
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main, arcade]
+    paths: ["arcade/**", ".github/workflows/arcade.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arcade
+  cancel-in-progress: true
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Draw the arcade
+        run: node arcade/render.mjs --out dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to the arcade-output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: arcade-output
+          build_dir: dist
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
