@@ -7,7 +7,7 @@ export default {
 
   // Project cards, in order. `blurb` replaces the repo description when set.
   projects: [
-    { repo: 'omoio', icon: 'omoio', blurb: 'A game library for Windows. Import your PS3 and Wii U games, press Play, and it sets up RPCS3 or Cemu for you.' },
+    { repo: 'omoio', icon: 'omoio', blurb: 'Your PS3, Wii U, Wii and GameCube games in one library on Windows. Press Play and it sets up RPCS3, Cemu or Dolphin for you.' },
     { repo: 'recode', icon: 'recode', blurb: 'Convert images from the right-click menu in Windows Explorer: HEIC, AVIF, WebP, JPEG, PNG and more.' },
     { repo: 'omoio-portraits', icon: 'portal', blurb: "Reads the figure pictures out of your own copy of Skylanders SWAP Force for Omoio's portal menu." },
   ],

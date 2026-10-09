@@ -13,6 +13,13 @@ function date(iso) {
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
+// The latest release as a small blue tag next to the name.
+function releaseBadge(tag, x, y) {
+  if (!tag) return [];
+  const w = textWidth(tag, 2) + 16;
+  return [rect(x, y, w, 22, '#126BFC'), text(tag, x + 8, y + 4, 2, '#ffffff')];
+}
+
 const count = (n, word) => `${n.toLocaleString('en-US')} ${word}${n === 1 ? '' : 's'}`;
 
 /** Returns { 'projects/<repo>.svg': svg } for every project in the config that exists. */
@@ -26,11 +33,19 @@ export function projects(s, cfg) {
     const blurb = wrap(project.blurb || repo.description || '', W - tx - 28, 2).slice(0, 2);
     const right = `★ ${repo.stars.toLocaleString('en-US')}   ${count(repo.forks, 'fork')}   ${count(repo.issues, 'open issue')}`;
     const meta = [repo.language?.name, count(repo.commits, 'commit'), `updated ${date(repo.pushedAt)}`].filter(Boolean).join('  ·  ');
+    // The name, its release tag and the counts share a row. A long name drops
+    // to a smaller size, and the tag is left out if it still doesn't fit.
+    const room = W - 28 - textWidth(right, 2) - 16 - tx;
+    const badgeW = repo.release ? textWidth(repo.release, 2) + 30 : 0;
+    const roomy = textWidth(repo.name, 3) + badgeW <= room;
+    const nameScale = roomy ? 3 : 2;
+    const release = textWidth(repo.name, nameScale) + badgeW <= room ? repo.release : null;
     const parts = [
       panel(0, 0, W, H, { fill: '#0b1226', border: '#1f2b4d', light: '#2a3a66', px: 3 }),
       rect(24, 24, 72, 72, '#111a35'),
       sprite(icon, pal, 28, 28, 4),
-      text(repo.name, tx, 20, 3, '#ffffff'),
+      text(repo.name, tx, roomy ? 20 : 24, nameScale, '#ffffff'),
+      ...releaseBadge(release, tx + textWidth(repo.name, nameScale) + 14, 20),
       text(right, W - 28, 24, 2, '#c9d3ee', { anchor: 'end' }),
       ...blurb.map((line, i) => text(line, tx, 56 + i * 20, 2, '#c9d3ee')),
     ];
@@ -40,10 +55,6 @@ export function projects(s, cfg) {
       mx += 18;
     }
     parts.push(text(meta, mx, 101, 2, '#8f9bbf'));
-    // The name and the counts share a row, so long names give way to the counts.
-    if (tx + textWidth(repo.name, 3) > W - 28 - textWidth(right, 2) - 16) {
-      parts.splice(4, 1, text(repo.name, tx, 22, 2, '#ffffff'));
-    }
 
     out[`projects/${repo.name}.svg`] = svg({
       w: W, h: H,
