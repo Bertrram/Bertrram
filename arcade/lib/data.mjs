@@ -26,6 +26,7 @@ const QUERY = `query($login: String!) {
         pushedAt
         stargazerCount
         forkCount
+        latestRelease { tagName publishedAt }
         issues(states: OPEN) { totalCount }
         primaryLanguage { name color }
         languages(first: 20, orderBy: { field: SIZE, direction: DESC }) { edges { size node { name color } } }
@@ -86,6 +87,7 @@ export function summarize(user, { today = new Date() } = {}) {
       pushedAt: r.pushedAt,
       stars: r.stargazerCount,
       forks: r.forkCount,
+      release: r.latestRelease?.tagName ?? null,
       issues: r.issues?.totalCount ?? 0,
       language: r.primaryLanguage,
       languages: r.languages.edges.map((e) => ({ name: e.node.name, color: e.node.color ?? '#8a8f99', size: e.size })),
@@ -165,7 +167,7 @@ export function fixtureUser(today = new Date('2026-10-08T12:00:00Z')) {
       nodes: [
         {
           name: 'omoio', description: 'A game library for Windows', createdAt: '2026-08-30T18:18:03Z', pushedAt: '2026-10-08T19:16:09Z',
-          stargazerCount: 13, forkCount: 1, issues: { totalCount: 4 }, primaryLanguage: { name: 'Rust', color: '#dea584' },
+          stargazerCount: 13, forkCount: 1, issues: { totalCount: 5 }, latestRelease: { tagName: 'v0.3.0', publishedAt: '2026-10-09T06:45:47Z' }, primaryLanguage: { name: 'Rust', color: '#dea584' },
           languages: { edges: [lang('Rust', '#dea584', 910000), lang('TypeScript', '#3178c6', 320000), lang('CSS', '#663399', 84000), lang('HTML', '#e34c26', 9000)] },
           defaultBranchRef: { target: { history: { totalCount: 612 } } },
         },
