@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="166" height="48" viewBox="0 0 166 48" shape-rendering="crispEdges" role="img" aria-label="LinkedIn">
+<title>LinkedIn</title>
+<style>
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }
+</style>
+<defs></defs>
+
+<rect x="3" y="0" width="160" height="48" fill="#1f2b4d" /><rect x="0" y="3" width="166" height="42" fill="#1f2b4d" />
+<rect x="3" y="3" width="160" height="42" fill="#111a35" />
+<rect x="3" y="3" width="160" height="2" fill="#2a3a66" />
+<path fill="#0a66c2" d="M18 9h30v3h-30zM18 12h3v3h-3zM27 12h21v3h-21zM18 15h3v3h-3zM27 15h21v3h-21zM18 18h30v3h-30zM18 21h3v3h-3zM27 21h3v3h-3zM42 21h6v3h-6zM18 24h3v3h-3zM27 24h3v3h-3zM45 24h3v3h-3zM18 27h3v3h-3zM27 27h3v3h-3zM36 27h3v3h-3zM45 27h3v3h-3zM18 30h3v3h-3zM27 30h3v3h-3zM36 30h3v3h-3zM45 30h3v3h-3zM18 33h3v3h-3zM27 33h3v3h-3zM36 33h3v3h-3zM45 33h3v3h-3zM18 36h30v3h-30z"/><path fill="#ffffff" d="M21 12h6v3h-6zM21 15h6v3h-6zM21 21h6v3h-6zM30 21h12v3h-12zM21 24h6v3h-6zM30 24h15v3h-15zM21 27h6v3h-6zM30 27h6v3h-6zM39 27h6v3h-6zM21 30h6v3h-6zM30 30h6v3h-6zM39 30h6v3h-6zM21 33h6v3h-6zM30 33h6v3h-6zM39 33h6v3h-6z"/>
+<path fill="#ffffff"  d="M60 15h2v2h-2zM60 17h2v2h-2zM60 19h2v2h-2zM60 21h2v2h-2zM60 23h2v2h-2zM60 25h2v2h-2zM60 27h10v2h-10zM74 15h2v2h-2zM72 19h4v2h-4zM74 21h2v2h-2zM74 23h2v2h-2zM74 25h2v2h-2zM72 27h6v2h-6zM80 19h8v2h-8zM80 21h2v2h-2zM88 21h2v2h-2zM80 23h2v2h-2zM88 23h2v2h-2zM80 25h2v2h-2zM88 25h2v2h-2zM80 27h2v2h-2zM88 27h2v2h-2zM92 15h2v2h-2zM92 17h2v2h-2zM92 19h2v2h-2zM98 19h2v2h-2zM92 21h2v2h-2zM96 21h2v2h-2zM92 23h4v2h-4zM92 25h2v2h-2zM96 25h2v2h-2zM92 27h2v2h-2zM98 27h2v2h-2zM106 19h6v2h-6zM104 21h2v2h-2zM112 21h2v2h-2zM104 23h10v2h-10zM104 25h2v2h-2zM106 27h6v2h-6zM124 15h2v2h-2zM124 17h2v2h-2zM118 19h8v2h-8zM116 21h2v2h-2zM124 21h2v2h-2zM116 23h2v2h-2zM124 23h2v2h-2zM116 25h2v2h-2zM124 25h2v2h-2zM118 27h8v2h-8zM128 15h6v2h-6zM130 17h2v2h-2zM130 19h2v2h-2zM130 21h2v2h-2zM130 23h2v2h-2zM130 25h2v2h-2zM128 27h6v2h-6zM136 19h8v2h-8zM136 21h2v2h-2zM144 21h2v2h-2zM136 23h2v2h-2zM144 23h2v2h-2zM136 25h2v2h-2zM144 25h2v2h-2zM136 27h2v2h-2zM144 27h2v2h-2z"/>
+</svg>
